@@ -5,7 +5,8 @@
   "description": "Monokai Minimal",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "monokai"
   ],
   "repository": "https://github.com/smridge/monokai-minimal-syntax",
   "license": "MIT",

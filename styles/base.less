@@ -345,6 +345,28 @@ atom-text-editor {
   border-bottom: 1px solid @red;
 }
 
-atom-text-editor[mini] .scroll-view {
-  padding-left: 1px;
+atom-text-editor[mini] {
+  overflow: auto;
+  color: @green;
+  border: 1px solid @blue;
+  background-color: @black;
+  letter-spacing: 1px;
+
+  .placeholder-text {
+    color: @gray;
+  }
+
+  .selection .region {
+    background-color: @gray;
+  }
+
+  .cursor {
+    border-color: @blue;
+    border-width: 3px;
+  }
+
+  &.is-focused {
+    background-color: darken(@dark-gray, 10%);
+    border-color: @blue;
+  }
 }
