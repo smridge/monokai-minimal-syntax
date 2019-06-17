@@ -1,0 +1,19 @@
+@import "syntax-variables";
+
+.syntax--source.syntax--emblem {
+  &.syntax--source.syntax--js.syntax--embedded.syntax--emblem {
+    .syntax--keyword.syntax--operator {
+      &.syntax--js {
+        color: @blue;
+      }
+
+      &.syntax--assignment.syntax--js {
+        color: @white;
+      }
+    }
+  }
+
+  .syntax--meta.syntax--control.syntax--flow.syntax--emblem {
+    color: @blue;
+  }
+}
