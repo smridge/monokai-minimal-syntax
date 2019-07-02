@@ -44,6 +44,7 @@ atom-text-editor {
 
   .cursor {
     color: @syntax-cursor-color;
+    border-width: 3px;
   }
 
   .selection .region {
@@ -110,8 +111,10 @@ atom-text-editor {
     color: darken(@red, 10%);
   }
 
-  &.syntax--parameter.syntax--function {
+  &.syntax--parameter.syntax--function,
+  &.syntax--other.syntax--block {
     color: @orange;
+    font-style: italic;
   }
 
   &.syntax--constant {
@@ -181,17 +184,29 @@ atom-text-editor {
       font-style: italic;
     }
 
-    &.syntax--constant.syntax--haskhey {
+    &.syntax--constant.syntax--haskhey,
+    &.syntax--constant {
       color: @purple;
     }
   }
 
   &.syntax--separator.syntax--method {
-    color: @blue;
+    color: @purple;
+  }
+
+  &.syntax--separator.syntax--object {
+    color: @green;
   }
 
   &.syntax--section.syntax--embedded {
     color: darken(@red, 10%);
+  }
+
+  &.syntax--section {
+    &.syntax--array,
+    &.syntax--function {
+      color: @yellow;
+    }
   }
 }
 
