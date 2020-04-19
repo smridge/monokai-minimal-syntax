@@ -11,4 +11,4 @@
 | Yellow       | `#ffff87` |![#ffff87](https://placehold.it/100x40/ffff87/111111?text=+)
 
 ## References
-[Download Extension](https://atom.io/themes/monokai-minimal)
+Install Extension via [Atom Themes](https://atom.io/themes/monokai-minimal)
