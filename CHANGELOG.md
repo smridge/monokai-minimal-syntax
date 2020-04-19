@@ -1,3 +1,16 @@
-## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+# Change Log
+
+## [Released]
+
+### [0.1.0]
+#### Added
+- New Sytanx Theme
+
+## [Unreleased]
+### [0.4.0]
+#### Removed
+- Framework Specific Selectors
+- Comment letter spacing
+
+#### Changed
+- Colors

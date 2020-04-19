@@ -60,29 +60,24 @@ atom-text-editor {
 
 .syntax--comment {
   color: @light-gray;
-  letter-spacing: 1px;
 }
 
 .syntax--keyword {
-  color: @red;
+  color: @magenta;
 
   &.syntax--control,
   &.syntax--operator,
-  &.syntax--other.syntax--unit {
-    color: @red;
-  }
-
-  &.syntax--other.syntax--special-method {
-    color: @green;
+  &.syntax--other {
+    color: @magenta;
   }
 }
 
 .syntax--storage {
-  color: @red;
+  color: @magenta;
 }
 
 .syntax--constant {
-  color: @blue;
+  color: @purple;
 
   &.syntax--character.syntax--escape,
   &.syntax--other.syntax--symbol,
@@ -108,7 +103,7 @@ atom-text-editor {
   color: lighten(@orange, 10%);
 
   &.syntax--interpolation {
-    color: darken(@red, 10%);
+    color: darken(@magenta, 10%);
   }
 
   &.syntax--parameter.syntax--function,
@@ -123,12 +118,12 @@ atom-text-editor {
 }
 
 .syntax--invalid.syntax--illegal {
-  background-color: @red;
+  background-color: @light-gray;
   color: @syntax-background-color;
 }
 
 .syntax--string {
-  color: @yellow-light;
+  color: @yellow;
 
   &.syntax--regexp {
     color: @blue;
@@ -139,7 +134,7 @@ atom-text-editor {
   }
 
   &.syntax--other.syntax--link {
-    color: @red;
+    color: @magenta;
   }
 
   .syntax--embedded.syntax--source {
@@ -150,17 +145,22 @@ atom-text-editor {
 }
 
 .syntax--punctuation {
+  &.syntax--separator {
+    color: @magenta;
+  }
+
   &.syntax--definition {
+
     &.syntax--comment {
       color: @light-gray;
     }
 
     &.syntax--entity {
-      color: @green;
+      color: @purple;
     }
 
     &.syntax--variable {
-      color: lighten(@red, 10%);
+      color: lighten(@magenta, 10%);
     }
 
     &.syntax--string,
@@ -171,7 +171,7 @@ atom-text-editor {
 
     &.syntax--heading,
     &.syntax--identity {
-      color: @red;
+      color: @magenta;
     }
 
     &.syntax--bold {
@@ -199,7 +199,7 @@ atom-text-editor {
   }
 
   &.syntax--section.syntax--embedded {
-    color: darken(@red, 10%);
+    color: darken(@magenta, 10%);
   }
 
   &.syntax--section {
@@ -226,8 +226,13 @@ atom-text-editor {
     &.syntax--any-method {
       color: @green;
     }
+
+    &.syntax--kernel {
+      color: @blue;
+    }
   }
 }
+
 
 .syntax--entity {
   &.syntax--name {
@@ -244,7 +249,7 @@ atom-text-editor {
     }
 
     &.syntax--tag {
-      color: @red;
+      color: @magenta;
       text-decoration: none;
     }
 
@@ -288,7 +293,7 @@ atom-text-editor {
   }
 
   &.syntax--require {
-    color: @red;
+    color: @magenta;
   }
 
   &.syntax--selector {
@@ -298,6 +303,14 @@ atom-text-editor {
   &.syntax--separator {
     background-color: @gray;
     color: @syntax-text-color;
+  }
+
+  &.syntax--control {
+    color: @blue;
+  }
+
+  &.syntax--at-rule {
+    color: @green;
   }
 }
 
@@ -317,7 +330,7 @@ atom-text-editor {
 
   &.syntax--deleted,
   &.syntax--list {
-    color: @red;
+    color: @magenta;
   }
 
   &.syntax--italic {
@@ -342,10 +355,8 @@ atom-text-editor {
 }
 
 .syntax--source {
-  &.syntax--js {
-    &.syntax--embedded {
-      color: @blue;
-    }
+  &.syntax--embedded {
+    color: lighten(@orange, 10%);
   }
 }
 
@@ -357,7 +368,7 @@ atom-text-editor {
 }
 
 .bracket-matcher .region {
-  border-bottom: 1px solid @red;
+  border-bottom: 1px solid @magenta;
 }
 
 atom-text-editor[mini] {
@@ -373,11 +384,6 @@ atom-text-editor[mini] {
 
   .selection .region {
     background-color: @gray;
-  }
-
-  .cursor {
-    border-color: @blue;
-    border-width: 3px;
   }
 
   &.is-focused {
